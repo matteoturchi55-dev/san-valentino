@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dadda e Tato ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+    text-align:center;
+    color:#333;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:40px 20px;
+    position:relative;
+}
+
+h1{
+    font-size:50px;
+    color:#d63384;
+}
+
+h2{
+    margin-top:60px;
+    font-size:32px;
+    color:#c2185b;
+}
+
+p{
+    font-size:18px;
+    max-width:800px;
+    margin:15px auto 30px auto;
+    line-height:1.7;
+}
+
+img{
+    width:90%;
+    max-width:600px;
+    border-radius:15px;
+    margin-top:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.prossima{
+    font-size:28px;
+    margin-top:80px;
+    cursor:pointer;
+    color:#d63384;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.prossima:hover{
+    transform:scale(1.1);
+}
+
+#torino{
+    display:none;
+    margin-top:40px;
+    opacity:0;
+    transition:opacity 1.2s ease;
+}
+
+button{
+    margin-top:40px;
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#d63384;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+/* CUORI */
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:floatUp 4s linear forwards;
+    opacity:0.8;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) scale(1);
+        opacity:0.8;
+    }
+    100%{
+        transform:translateY(-100vh) scale(1.8);
+        opacity:0;
+    }
+}
+</style>
+
+<script>
+function mostraTorino(){
+    const t = document.getElementById("torino");
+    t.style.display="block";
+    setTimeout(() => {
+        t.style.opacity="1";
+    }, 50);
+
+    generaCuori();
+}
+
+function generaCuori(){
+    for(let i=0;i<25;i++){
+        setTimeout(()=>{
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML="❤️";
+            heart.style.left = Math.random()*100 + "vw";
+            heart.style.fontSize = (Math.random()*20 + 15) + "px";
+            heart.style.animationDuration = (Math.random()*2 + 3) + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },5000);
+        }, i*150);
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dadda e Tato ❤️</h1>
+<p>La nostra storia, tappa dopo tappa.</p>
+
+<h2>Giardino degli Aranci 🌅</h2>
+<img src="giardino-aranci.jpg">
+<p>
+Ci eravamo già incontrati un anno prima. In auletta. Tra libri e qualcosa che non aveva ancora il coraggio di nascere. Poi ci siamo persi. E tra questi alberi ci siamo ritrovati. Questa volta senza fretta (senza baci ahahah). Perché quando qualcosa è giusto… torna.
+</p>
+
+<h2>Pizza insieme 🍕</h2>
+<img src="pizza.jpg">
+<p>
+Dove tutto è riniziato davvero. Ti ho portata a mangiare la pizza fritta. Convintissimo fosse un’idea geniale. Solo dopo ho scoperto che ti aveva fatto schifo. Eppure sei rimasta. Forse non era la pizza il motivo.
+</p>
+
+<h2>Cascatelle 🌊</h2>
+<img src="cascatelle.jpg">
+<p>
+Intorno a noi gente super a proprio agio. Molto romana. Noi a chiederci se l’acqua fosse troppo freda. Alla fine ci siamo buttati. Un po’ come con noi. Con un po’ di timore. Ma insieme.
+</p>
+
+<h2>Giardino di Ninfa 🌿</h2>
+<img src="ninfa.jpg">
+<p>
+Un giardino che sembrava finto. Colori che non pensavamo nemmeno esistessero. E la scoperta ufficiale della birra alle “Visciòle”. Pronunciato male da quel tizio accanto a noi. E diventato nostro per sempre.
+</p>
+
+<h2>Caprarola 🏰</h2>
+<img src="caprarola.jpg">
+<p>
+Io guardavo la reggia. Ma soprattutto guardavo te. Mentre mi spiegavi ogni prospettiva, ogni dettaglio. Lì ho capito che l’architettura mi piaceva… ma la tua passione di più.
+</p>
+
+<h2>Pienza & Val d'Orcia 🌄</h2>
+<img src="pienza.jpg">
+<p>
+Vallate immense. Da film. La cappella della Madonna di Vitaleta. Un posto perfetto per sposarsi. Se non fosse per il vento che voleva farci volare via.
+</p>
+
+<h2>Sharm el Sheik 🏜</h2>
+<img src="sharm.jpg">
+<p>
+La porta di Allah alle spalle. Il Blue Hole. Dahab. I quad all’alba nel deserto. Siamo tornati con un bagaglio pieno di esperienze. E solo un leggerissimo mal di pancia (grazie ghiaccio del Farsha)
+</p>
+
+<h2>Kefalonia 🇬🇷</h2>
+<img src="kefalonia.jpg">
+<p>
+Spiagge paradisiache. Raggiungibili solo dopo percorsi degni di un corso avanzato di arrampicata. Sudati. Stanchi. Ma convinti di essere atleti olimpici.
+</p>
+
+<div class="prossima" onclick="mostraTorino()">
+✨ Prossima Tappa ✨
+</div>
+
+<div id="torino">
+    <h2>TORINO ⚪⚫</h2>
+    <p>
+Weekend insieme. Atmosfera romantica.  
+E magari una partita della Juve…  
+Yildiz permettendo.
+    </p>
+    <img src="yildiz.jpg">
+
+    <button onclick="alert('Troppo tardi. È già prenotato ❤️')">
+    Accetti il viaggio?
+    </button>
+</div>
+
+</div>
+
+</body>
+</html>
